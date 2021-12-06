@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            background-color: powderblue;
+            background-image: url("https://th.bing.com/th/id/R.64d9b8f7e51fd6675abf1c0e8c96043a?rik=0HcdEYiW87QamA&riu=http%3a%2f%2f1.bp.blogspot.com%2f-rKN5rDdfc8U%2fUPzg1okvaJI%2fAAAAAAAAAO8%2f0LviefWbLpE%2fs1600%2fDestroyedHighwayCityUpdate_1.20.13.jpg&ehk=uXt4uNGaX07EDxE1PjFQ218yEPmTM6i1n0r%2ftp3KOKU%3d&risl=&pid=ImgRaw&r=0");
+        }
+        h1   {
+            color: yellow;
+            text-align: center;
+        }
+        .button {
+            display: inline-block;
+            border-radius: 6px;
+            background-color: #5f4d4d;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+            padding: 20px;
+            max-width: 200px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .button:hover span {
+            padding-right: 25px;
+        }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+        .optionsbtn{
+            margin:auto;
+            width: 80%;
+        }
+        .bto{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction:row;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        </style>
+</head>
+<body>
+    <h1>Home</h1><br />
+    <div class="optionsbtn">
+        <div class="bto">
+            <button type="button" class="button" style="vertical-align:middle" value="cadUser"><span><a href="/cadUser">Cadastrar usuario</a></span></button>
+            <button type="button" class="button" style="vertical-align:middle" value="listUser"><span><a href="/listUser">Listar usuario</a></span></button>
+        </div>
+        <div class="bto">
+            <button type="button" class="button" style="vertical-align:middle" value="cadProd"><span><a href="/cadProd">Cadastrar Produto</a></span></button>
+            <button type="button" class="button" style="vertical-align:middle" value="listprod"><span><a href="/listProd">Listar produto</a></span></button>
+        </div>
+    </div>
+</body>
+</html>

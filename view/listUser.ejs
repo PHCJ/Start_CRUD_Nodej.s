@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de usuários</title>
+    <style>
+        ul {
+             list-style:none;
+             text-align:center;
+             background-color: azure;
+             
+        }
+    
+        input{
+            background-color:rgb(255, 255, 255);
+            margin: 10px 5px;
+            padding: 10px;
+            color: rgb(233, 0, 0);
+            border-radius: 5rem;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" class="button" style="vertical-align:middle" value="index"><span><a href="/">Home</a></span></button>
+    <h1><% mensagem %></h1>
+        <ul>
+            <% embrulho.forEach(function(embrulho){ %>
+            <li>
+                <%= embrulho.id %> 
+                <%= embrulho.nome %>
+                
+                <input type="button" value="delete" onclick="location.href='/delete/usuario/<%= embrulho.id %>'"/>
+                <hr />
+            </li>
+          <% }) %>
+        </ul>
+</body>
+</html>
+
+
